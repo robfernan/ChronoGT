@@ -25,13 +25,11 @@
 
 <p align="center">
   <a href="https://youtube.com/shorts/R3h-WX0FZ2w">
-    <img src="preview.gif" alt="ChronoGT Watch Face Animated Live Preview on Garmin Venu 3" width="460" />
+    <img src="docs/assets/preview.gif" alt="ChronoGT Watch Face Animated Live Preview on Garmin Venu 3" width="460" />
   </a>
   <br />
   <sub>▶️ <em>Click above or <a href="https://youtube.com/shorts/R3h-WX0FZ2w">watch the full 60-second live demonstration on YouTube Shorts</a></em></sub>
 </p>
-
-
 
 ---
 
@@ -56,6 +54,42 @@
 
 ---
 
+## 📁 Repository Structure
+
+The project follows the standard Garmin Connect IQ enterprise directory layout:
+
+```text
+ChronoGT/
+├── .gitignore                      # Hardened git ignore (blocks RSA keys & build temp)
+├── LICENSE                         # Official MIT License
+├── README.md                       # Documentation & store assets
+├── manifest.xml                    # Application manifest & 94 certified devices
+├── monkey.jungle                   # Connect IQ build configuration
+├── bin/
+│   └── ChronoGT.iq                 # Store release package (1.4 MB universal binary)
+├── docs/
+│   └── assets/                     # Store graphics, hero banner & preview animations
+│       ├── cover_500x500.png       # 500x500 store cover image
+│       ├── hero_banner.png         # 1440x720 featured store banner
+│       ├── preview.gif             # Animated 10 FPS demonstration
+│       ├── preview.png             # Static high-res render on Venu 3 bezel
+│       ├── screen_image.png        # Compressed store screenshot (< 150 KB)
+│       └── social_preview.png      # 1280x640 GitHub Open Graph card
+├── resources/
+│   ├── drawables/                  # Launcher icon & XML definitions
+│   ├── settings/                   # Garmin Connect Mobile property definitions
+│   └── strings/                    # Localized string resources
+├── scripts/
+│   ├── record.sh                   # Automated frame recorder & GIF pipeline
+│   ├── record_60s.sh               # 60-second 1080x1920 YouTube Short recorder
+│   └── run.sh                      # One-click compile & simulator launcher
+└── source/
+    ├── ChronoGTApp.mc              # Application lifecycle & settings listener
+    └── ChronoGTView.mc             # Procedural 2D vector drawing engine
+```
+
+---
+
 ## ⌚ Supported Garmin Devices (94 Round Color Models)
 
 Pre-compiled and certified in `bin/ChronoGT.iq` across 94 round color Garmin watches (Connect IQ 3.2+), including:
@@ -71,7 +105,7 @@ Pre-compiled and certified in `bin/ChronoGT.iq` across 94 round color Garmin wat
 ## 🚀 Installation & Sideloading
 
 ### Option 1: Garmin Connect IQ Store
-Search for **ChronoGT Tachometer** directly inside the Garmin Connect IQ Store app on iOS or Android.
+Download [**ChronoGT Tachometer** on the Connect IQ Store](https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a) directly via the Connect IQ mobile app on iOS or Android.
 
 ### Option 2: Direct Binary Sideload (.iq)
 1. Download `ChronoGT.iq` from the [Latest GitHub Release](https://github.com/robfernan/ChronoGT/releases/latest).
@@ -89,7 +123,7 @@ Search for **ChronoGT Tachometer** directly inside the Garmin Connect IQ Store a
 ### Build & Run
 ```bash
 # Run locally in the Garmin Simulator
-./run.sh venu3
+./scripts/run.sh venu3
 
 # Build store package (.iq) supporting all 94 devices
 monkeyc -e -r -f monkey.jungle -o bin/ChronoGT.iq -y ~/.Garmin/ConnectIQ/developer_key.der -w
@@ -116,7 +150,6 @@ Since I do not own every physical Garmin watch model, community feedback is inva
 ---
 
 ## 📄 License
-
 
 This project is licensed under the [MIT License](LICENSE) — see the LICENSE file for details.
 
