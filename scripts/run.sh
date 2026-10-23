@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-SDK_BIN="/home/rf80678/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-9.3.0-2026-10-20-95888f262/bin"
-PROJECT_DIR="/home/rf80678/Documents/Projects/Garmin/ChronoGT"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 DEVICE="${1:-venu3}"
+
 
 export LD_LIBRARY_PATH="/home/rf80678/.local/lib:${LD_LIBRARY_PATH:-}"
 export DISPLAY="${DISPLAY:-:0}"

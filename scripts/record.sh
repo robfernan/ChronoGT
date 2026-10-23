@@ -2,10 +2,11 @@
 # record.sh — Automated recorder for ChronoGT in the Garmin CIQ Simulator
 # Generates both a looping preview.gif and a 9:16 vertical MP4 for YouTube Shorts.
 
-set -euo pipefail
-PROJECT_DIR="/home/rf80678/Documents/Projects/Garmin/ChronoGT"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 DURATION="${1:-15}"  # default 15 seconds
 DEVICE="${2:-venu3}"
+
 TMP_DIR="/tmp/chronogt_rec_$$"
 
 mkdir -p "$TMP_DIR"

@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-export DISPLAY=:0
-PROJECT_DIR="/home/rf80678/Documents/Projects/Garmin/ChronoGT"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_DIR"
+
 
 WID=$(xwininfo -root -tree | grep 'CIQ Simulator - Venu' | awk '{print $1}' | head -n 1 || true)
 if [ -z "$WID" ]; then
