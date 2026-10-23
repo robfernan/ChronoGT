@@ -97,7 +97,26 @@ monkeyc -e -r -f monkey.jungle -o bin/ChronoGT.iq -y ~/.Garmin/ConnectIQ/develop
 
 ---
 
+## 💬 Community Testing & Feedback
+
+This project was developed, type-checked, and simulated using the official **Garmin Connect IQ SDK 9.3.0** hardware emulator. 
+
+Since I do not own every physical Garmin watch model, community feedback is invaluable! If you test ChronoGT on your physical device:
+- Please report your watch model and performance.
+- Have a feature request or layout idea? Feel free to open an issue or feature suggestion on [GitHub Issues](https://github.com/robfernan/ChronoGT/issues).
+
+---
+
+## 🗺️ Roadmap & Next Milestones
+
+- [x] **v1.0.0 — Initial Launch:** 240° sweeping tachometer, progressive 5-LED shift lights, live health telemetry, and universal 94-device compatibility.
+- [ ] **v1.1.0 — On-Device Customization Menu:** Allow switching between JDM Amber, Track Red, Nismo Cyan, and Retro Lime themes directly from the watch menu (`WatchUi.Menu2`).
+- [ ] **v1.2.0 — Expanded Sensor Gauge Modes:** Selectable gauge modes for Real-Time Heart Rate Zone RPM and Daily Step Goal progress.
+
+---
+
 ## 📄 License
+
 
 This project is licensed under the [MIT License](LICENSE) — see the LICENSE file for details.
 
