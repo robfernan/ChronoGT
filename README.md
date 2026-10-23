@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="preview.png" alt="ChronoGT Watch Face Preview on Garmin Venu 3" width="460" />
+  <img src="preview.gif" alt="ChronoGT Watch Face Animated Live Preview on Garmin Venu 3" width="460" />
 </p>
 
 ---
