@@ -1,5 +1,26 @@
+# Garmin Connect IQ Build Artifacts
 bin/*.prg
 bin/*.debug.xml
+bin/gen/
+bin/mir/
 bin/internal_mir/
-*.bak
+bin/internal-mir/
+bin/*-settings.json
+
+# Developer RSA Keys & Certificates (NEVER COMMIT)
+*.der
+*.key
+*.pem
+developer_key.*
+
+# Local Recordings & Temp Visuals
+*.mp4
 sim_preview.png
+frames/
+
+# Editor & System
+.DS_Store
+*.bak
+*.swp
+*~
+
