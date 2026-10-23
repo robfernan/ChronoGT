@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/badge/Platform-Garmin%20Connect%20IQ-007CC3?style=for-the-badge&logo=garmin&logoColor=white" alt="Garmin Connect IQ" />
   <img src="https://img.shields.io/badge/SDK-Connect%20IQ%209.3.0-FFAA00?style=for-the-badge" alt="SDK 9.3.0" />
   <img src="https://img.shields.io/badge/Language-Monkey%20C-FF2200?style=for-the-badge" alt="Monkey C" />
+  <img src="https://img.shields.io/badge/YouTube-60s%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Demo" />
   <img src="https://img.shields.io/badge/License-MIT-00FF66?style=for-the-badge" alt="MIT License" />
   <img src="https://img.shields.io/badge/Supported%20Models-94%20Watches-lightgrey?style=for-the-badge" alt="94 Models" />
 </p>
@@ -13,8 +14,13 @@
 </p>
 
 <p align="center">
-  <img src="preview.gif" alt="ChronoGT Watch Face Animated Live Preview on Garmin Venu 3" width="460" />
+  <a href="https://youtube.com/shorts/R3h-WX0FZ2w">
+    <img src="preview.gif" alt="ChronoGT Watch Face Animated Live Preview on Garmin Venu 3" width="460" />
+  </a>
+  <br />
+  <sub>▶️ <em>Click above or <a href="https://youtube.com/shorts/R3h-WX0FZ2w">watch the full 60-second live demonstration on YouTube Shorts</a></em></sub>
 </p>
+
 
 ---
 
