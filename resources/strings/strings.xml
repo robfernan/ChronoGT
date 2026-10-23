@@ -1,0 +1,16 @@
+<strings>
+    <string id="AppName">ChronoGT Tachometer</string>
+
+    <string id="ThemeTitle">Cluster Accent Theme</string>
+    <string id="ThemeAmber">JDM Amber (#FFAA00)</string>
+    <string id="ThemeRed">Track Red (#FF2200)</string>
+    <string id="ThemeCyan">Nismo Cyan (#00CCFF)</string>
+    <string id="ThemeGreen">Retro Lime (#00FF66)</string>
+
+    <string id="GaugeModeTitle">Tachometer Gauge Mode</string>
+    <string id="GaugeSeconds">Live Seconds Sweep (0-60s)</string>
+    <string id="GaugeSteps">Daily Step Goal RPM</string>
+    <string id="GaugeHR">Heart Rate Zone RPM</string>
+
+    <string id="ShowShiftLightTitle">Redline Shift-Light LEDs</string>
+</strings>

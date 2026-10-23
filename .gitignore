@@ -1,0 +1,5 @@
+bin/*.prg
+bin/*.debug.xml
+bin/internal_mir/
+*.bak
+sim_preview.png
