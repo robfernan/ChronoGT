@@ -4,12 +4,12 @@
   <a href="https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a">
     <img src="https://img.shields.io/badge/Garmin%20Store-Live%20on%20Connect%20IQ-007CC3?style=for-the-badge&logo=garmin&logoColor=white" alt="Garmin Connect IQ Store" />
   </a>
+  <img src="https://img.shields.io/badge/Downloads-100%2B%20in%20Day%201-00CC66?style=for-the-badge&logo=garmin&logoColor=white" alt="100+ Downloads Day 1" />
   <img src="https://img.shields.io/badge/SDK-Connect%20IQ%209.3.0-FFAA00?style=for-the-badge" alt="SDK 9.3.0" />
   <img src="https://img.shields.io/badge/Language-Monkey%20C-FF2200?style=for-the-badge" alt="Monkey C" />
   <a href="https://youtube.com/shorts/R3h-WX0FZ2w">
-    <img src="https://img.shields.io/badge/YouTube-60s%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Demo" />
+    <img src="https://img.shields.io/badge/YouTube-Shorts%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Demo" />
   </a>
-  <img src="https://img.shields.io/badge/License-MIT-00FF66?style=for-the-badge" alt="MIT License" />
   <img src="https://img.shields.io/badge/Supported%20Models-94%20Watches-lightgrey?style=for-the-badge" alt="94 Models" />
 </p>
 
@@ -28,8 +28,20 @@
     <img src="docs/assets/preview.gif" alt="ChronoGT Watch Face Animated Live Preview on Garmin Venu 3" width="460" />
   </a>
   <br />
-  <sub>▶️ <em>Click above or <a href="https://youtube.com/shorts/R3h-WX0FZ2w">watch the full 60-second live demonstration on YouTube Shorts</a></em></sub>
+  <sub>▶️ <em>Click above or <a href="https://youtube.com/shorts/R3h-WX0FZ2w">watch the full live demonstration on YouTube Shorts</a></em></sub>
 </p>
+
+---
+
+## 📈 Launch Traction & Organic Milestones
+
+Following its release on **October 23, 2026**, ChronoGT achieved rapid early community adoption:
+- **100+ Installs in 24 Hours:** Crossed 100+ verified active downloads on the Garmin Connect IQ Store within Day 1 of launch.
+- **Organic Social Conversion:**
+  - **YouTube Shorts:** 193+ views (in 1 day, 18 hours) directly driving active installs from watch enthusiasts.
+  - **DeviantArt:** 13+ views from digital design and automotive UI communities.
+  - **Pinterest:** Early discovery pin indexing across motorsport & wearable design boards.
+- **Physical Hardware Field-Tested:** Validated on physical hardware including the **Garmin MARQ (Gen 1) Captain**, confirming zero frame drops and flawless memory budget execution under strict 64-color MIP transflective constraints.
 
 ---
 
