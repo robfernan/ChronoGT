@@ -4,13 +4,17 @@
   <a href="https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a">
     <img src="https://img.shields.io/badge/Garmin%20Store-Live%20on%20Connect%20IQ-007CC3?style=for-the-badge&logo=garmin&logoColor=white" alt="Garmin Connect IQ Store" />
   </a>
-  <img src="https://img.shields.io/badge/Downloads-100%2B%20in%20Day%201-00CC66?style=for-the-badge&logo=garmin&logoColor=white" alt="100+ Downloads Day 1" />
+  <img src="https://img.shields.io/badge/Installs-100%2B%20%C2%B7%2094%20models-00CC66?style=for-the-badge&logo=garmin&logoColor=white" alt="100+ installs · 94 models" />
   <img src="https://img.shields.io/badge/SDK-Connect%20IQ%209.3.0-FFAA00?style=for-the-badge" alt="SDK 9.3.0" />
   <img src="https://img.shields.io/badge/Language-Monkey%20C-FF2200?style=for-the-badge" alt="Monkey C" />
   <a href="https://youtube.com/shorts/R3h-WX0FZ2w">
     <img src="https://img.shields.io/badge/YouTube-Shorts%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Demo" />
   </a>
   <img src="https://img.shields.io/badge/Supported%20Models-94%20Watches-lightgrey?style=for-the-badge" alt="94 Models" />
+</p>
+
+<p align="center">
+  <sub>The <a href="https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a">live Connect IQ store page</a> shows <strong>100+ downloads</strong> · 94 models · free · v1.0.0</sub>
 </p>
 
 <p align="center">
@@ -22,6 +26,8 @@
     <strong>⬇️ Download Free on the Garmin Connect IQ Store</strong>
   </a>
 </p>
+
+> **Running ChronoGT on your wrist?** [⭐ Star the repo](https://github.com/robfernan/ChronoGT) so other Garmin folks can find it — and open an [issue](https://github.com/robfernan/ChronoGT/issues) with your watch model if anything feels off.
 
 <p align="center">
   <a href="https://youtube.com/shorts/R3h-WX0FZ2w">
@@ -35,8 +41,8 @@
 
 ## 📈 Launch Traction & Organic Milestones
 
-Following its release on **October 23, 2026**, ChronoGT achieved rapid early community adoption:
-- **100+ Installs in 24 Hours:** Crossed 100+ verified active downloads on the Garmin Connect IQ Store within Day 1 of launch.
+Following its release on **October 23, 2026**:
+- **100+ Downloads:** The [live Connect IQ store page](https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a) shows **100+ downloads** for ChronoGT Tachometer (free, v1.0.0).
 - **Organic Social Conversion:**
   - **YouTube Shorts:** 193+ views (in 1 day, 18 hours) directly driving active installs from watch enthusiasts.
   - **DeviantArt:** 13+ views from digital design and automotive UI communities.
