@@ -460,9 +460,10 @@ class ChronoGTView extends WatchUi.WatchFace {
             }
         }
         var timeStr = Lang.format("$1$:$2$", [hour.format("%02d"), clockTime.min.format("%02d")]);
-        var numFont = Graphics.FONT_NUMBER_HOT;
+        // For displays with radius < 140 (e.g. 240x240 like MARQ), use FONT_NUMBER_MEDIUM so it doesn't collide with flank bars
+        var numFont = (radius < 140) ? Graphics.FONT_NUMBER_MEDIUM : Graphics.FONT_NUMBER_HOT;
         var numH = Graphics.getFontHeight(numFont);
-        var timeY = cy - (numH / 2) - (radius * 8) / 100;
+        var timeY = cy - (numH / 2) - (radius * 4) / 100;
 
         dc.setColor(COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, timeY, numFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
@@ -472,7 +473,9 @@ class ChronoGTView extends WatchUi.WatchFace {
         var sysStats = _sysStats;
         var batVal = (sysStats != null && sysStats.battery != null) ? sysStats.battery.toNumber() : 100;
         var batRatio = batVal.toFloat() / 100.0f;
-        drawAP1FlankBar(dc, cx - (radius * 78) / 100, cy + (radius * 4) / 100, (radius * 32) / 100, batRatio, (batVal <= 20) ? COLOR_REDLINE : accentColor);
+        var barY = cy - (radius * 12) / 100;
+        var barH = (radius * 36) / 100;
+        drawAP1FlankBar(dc, cx - (radius * 72) / 100, barY, barH, batRatio, (batVal <= 20) ? COLOR_REDLINE : accentColor);
 
         // Right Flank Bar = Steps / Goal (AP1 Fuel Level)
         var actInfo = _actInfo;
@@ -482,17 +485,19 @@ class ChronoGTView extends WatchUi.WatchFace {
         if (stepRatio > 1.0f) {
             stepRatio = 1.0f;
         }
-        drawAP1FlankBar(dc, cx + (radius * 72) / 100, cy + (radius * 4) / 100, (radius * 32) / 100, stepRatio, accentColor);
+        drawAP1FlankBar(dc, cx + (radius * 66) / 100, barY, barH, stepRatio, accentColor);
 
-        // 5. Date Readout (clean spacing below large time digits)
+        // 5. Date Readout (clean spacing below speedo digits)
         var dateStr = Lang.format("$1$ $2$", [dateInfo.day_of_week.toUpper(), dateInfo.day.format("%02d")]);
         dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, cy + (radius * 16) / 100, Graphics.FONT_TINY, dateStr, Graphics.TEXT_JUSTIFY_CENTER);
+        var dateY = timeY + numH - ((radius < 140) ? 2 : 4);
+        dc.drawText(cx, dateY, Graphics.FONT_TINY, dateStr, Graphics.TEXT_JUSTIFY_CENTER);
 
         // 6. Telemetry Row: Slot A, Live Seconds, Slot B (spread wide to avoid collision)
         var strA = ChronoGTMetrics.getMetricString(_cachedMetricSlotA, _actInfo, _sysStats, _hr);
         var strB = ChronoGTMetrics.getMetricString(_cachedMetricSlotB, _actInfo, _sysStats, _hr);
-        var rowY = cy + (radius * 40) / 100;
+        var dateH = Graphics.getFontHeight(Graphics.FONT_TINY);
+        var rowY = dateY + dateH + ((radius < 140) ? 2 : 4);
 
         if (strA.length() > 0) {
             dc.setColor(COLOR_MUTED, Graphics.COLOR_TRANSPARENT);
