@@ -13,4 +13,21 @@
     <string id="GaugeHR">Heart Rate Zone RPM</string>
 
     <string id="ShowShiftLightTitle">Redline Shift-Light LEDs</string>
+
+    <string id="LayoutTitle">Cluster Layout Style</string>
+    <string id="LayoutClassic">Classic JDM Analog (RX-7/Defi)</string>
+    <string id="LayoutRibbon">F1 / S2000 Progressive Ribbon</string>
+    <string id="LayoutSegmented">BX 19 Digit Retro Segmented</string>
+
+    <string id="RedlinePulseTitle">Redline Limiter Flash (:55-:59)</string>
+
+    <string id="MetricSlotATitle">Bottom Left Metric Slot</string>
+    <string id="MetricSlotBTitle">Bottom Right Metric Slot</string>
+    <string id="MetricBattery">Battery %</string>
+    <string id="MetricSteps">Total Steps</string>
+    <string id="MetricRemaining">Steps to Goal</string>
+    <string id="MetricCalories">Calories (kCal)</string>
+    <string id="MetricDistance">Distance (mi/km)</string>
+    <string id="MetricHR">Heart Rate (BPM)</string>
+    <string id="MetricNone">None (Hidden)</string>
 </strings>

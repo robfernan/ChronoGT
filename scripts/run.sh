@@ -6,6 +6,7 @@ PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 DEVICE="${1:-venu3}"
 
 
+SDK_BIN="${SDK_BIN:-/home/rf80678/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-9.3.0-2026-10-20-95888f262/bin}"
 export LD_LIBRARY_PATH="/home/rf80678/.local/lib:${LD_LIBRARY_PATH:-}"
 export DISPLAY="${DISPLAY:-:0}"
 export LC_ALL=C.UTF-8

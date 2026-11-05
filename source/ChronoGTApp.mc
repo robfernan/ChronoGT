@@ -14,12 +14,23 @@ class ChronoGTApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
     }
 
+    private var _view as ChronoGTView?;
+
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new ChronoGTView() ];
+        _view = new ChronoGTView();
+        return [ _view ];
     }
 
-    // Trigger immediate redraw when user changes Theme or Gauge Mode in Garmin Connect
+    // On-Device Customize Menu (Triggered via watch face customize screen / Menu button)
+    function getSettingsView() as [Views] or [Views, InputDelegates] or Null {
+        return [ new ChronoGTSettingsMenu(), new ChronoGTSettingsMenuDelegate() ];
+    }
+
+    // Trigger immediate redraw and cache reload when user changes settings on phone or on watch
     function onSettingsChanged() as Void {
+        if (_view != null) {
+            _view.reloadSettings();
+        }
         WatchUi.requestUpdate();
     }
 

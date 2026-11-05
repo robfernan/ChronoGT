@@ -53,6 +53,9 @@ Following its release on **October 23, 2026**:
 
 ## ✨ Features
 
+- **On-Watch Customization Menu (v1.1.0):**
+  - Customize themes, gauge modes, and shift lights directly on your wrist using the native Garmin menu—zero phone required!
+  - Also fully compatible with Garmin Connect Mobile settings for two-way synchronization.
 - **240° Sweeping Racing Tachometer Gauge:**
   - Smooth outer gauge arc (`210°` to `330°` clockwise) with a designated **Redline Zone** (`75%–100%`) and hardware anti-aliasing.
   - Sweeping perimeter needle indicating live seconds without cluttering the center display.
@@ -62,8 +65,13 @@ Following its release on **October 23, 2026**:
   - **Top:** Day of week & date (`FRI 23`)
   - **Center:** Crisp oversized digital time (`HH:MM`, 12h/24h aware) + live `:SS` seconds counter
   - **Bottom:** Battery `%` (turns redline at `≤ 20%`), live Heart Rate (`BPM`), and `STEPS` with an integrated step-goal progress bar
-- **Signature JDM Phosphor Amber Cluster Styling:**
-  - Precision `#FFAA00` phosphor warm instrument cluster glow with high-contrast `#FF2200` redline accents.
+- **Zero-Allocation Ultra-Low-Power Engine:**
+  - Cached property state and hoisted vectors to minimize CPU wake cycles and maximize battery life on MIP and AMOLED displays.
+- **4 Signature Racing Cluster Colorways:**
+  - **JDM Amber (#FFAA00):** Warm 90s instrument cluster glow.
+  - **Redline Red (#FF2200):** Aggressive high-contrast sport trim.
+  - **Track Cyan (#00CCFF):** Modern motorsport digital display.
+  - **Tach Green (#00FF66):** Classic endurance racing telemetry.
 - **AMOLED Always-On Display (AOD) Burn-In Safe:**
   - Micro-pixel drift mode (`onEnterSleep`) to prevent screen burn-in on AMOLED displays while preserving battery life.
 - **Exceptional Memory & Battery Efficiency:**
@@ -103,7 +111,9 @@ ChronoGT/
 │   └── run.sh                      # One-click compile & simulator launcher
 └── source/
     ├── ChronoGTApp.mc              # Application lifecycle & settings listener
-    └── ChronoGTView.mc             # Procedural 2D vector drawing engine
+│   ├── ChronoGTMetrics.mc          # Zero-allocation telemetry string cache
+│   ├── ChronoGTSettingsMenu.mc     # On-device WatchUi.Menu2 customization interface
+│   └── ChronoGTView.mc             # Procedural 2D vector drawing engine (Layouts 0, 1, 2)
 ```
 
 ---
@@ -162,8 +172,8 @@ Since I do not own every physical Garmin watch model, community feedback is inva
 ## 🗺️ Roadmap & Next Milestones
 
 - [x] **v1.0.0 — Initial Launch:** 240° sweeping tachometer, progressive 5-LED shift lights, live health telemetry, and universal 94-device compatibility.
-- [ ] **v1.1.0 — On-Device Customization Menu:** Allow switching between JDM Amber, Track Red, Nismo Cyan, and Retro Lime themes directly from the watch menu (`WatchUi.Menu2`).
-- [ ] **v1.2.0 — Expanded Sensor Gauge Modes:** Selectable gauge modes for Real-Time Heart Rate Zone RPM and Daily Step Goal progress.
+- [x] **v1.1.0 — On-Device Customization Menu:** Allow switching themes, gauge modes, and shift lights directly from the watch menu ().
+- [x] **v1.2.0 — Night & Day Multi-Cluster Evolution:** Added 3 distinct clusters (Classic JDM, S2000 Ribbon, BX 19 Digit), :55-:59 redline pulse, and configurable dual metric slots (Battery, Steps, Remaining, Calories, Distance, HR).
 
 ---
 
