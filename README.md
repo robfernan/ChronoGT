@@ -47,15 +47,24 @@ Following its release on **October 23, 2026**:
   - **YouTube Shorts:** 193+ views (in 1 day, 18 hours) directly driving active installs from watch enthusiasts.
   - **DeviantArt:** 13+ views from digital design and automotive UI communities.
   - **Pinterest:** Early discovery pin indexing across motorsport & wearable design boards.
-- **Physical Hardware Field-Tested:** Validated on physical hardware including the **Garmin MARQ (Gen 1) Captain**, confirming zero frame drops and flawless memory budget execution under strict 64-color MIP transflective constraints.
+- **Physical Hardware & Simulator Validated Across Resolutions:**
+  - **MARQ Captain (240×240 64-color MIP):** Perfect memory budget and zero text collisions under tight low-resolution constraints.
+  - **Fēnix 8 47mm (454×454 AMOLED):** Ultra-sharp high-DPI contrast and vibrant night-mode luminous gauges.
+  - **Vívoactive 5 (390×390 AMOLED):** Flawless proportional scaling across all 3 cluster styles with adaptive typography.
 
 ---
 
 ## ✨ Features
 
-- **On-Watch Customization Menu (v1.1.0):**
-  - Customize themes, gauge modes, and shift lights directly on your wrist using the native Garmin menu—zero phone required!
-  - Also fully compatible with Garmin Connect Mobile settings for two-way synchronization.
+- **3 Authentic Racing Cluster Layouts (v1.2.0):**
+  - **Layout 0: Classic JDM Analog** (240° Defi / RX-7 perimeter sweep, needle, shift LEDs, center digital speedo).
+  - **Layout 1: Honda S2000 AP1** (Signature progressive climbing tachometer arc, twin vertical flank bars for Battery & Steps, high-contrast digital speedo).
+  - **Layout 2: 1985 Citroën BX 19 Digit** (Dual nested neon arcs, VFD bordered digital box with glowing corner brackets, and diagnostic tiles).
+- **Universal Resolution-Adaptive Geometry:**
+  - Dynamic `getTextDimensions` typography scaling guaranteeing zero text collision or overlapping elements across 218px, 240px, 260px, 280px, 360px, 390px, 416px, and 454px screens.
+- **On-Watch Customization Menu (WatchUi.Menu2):**
+  - Customize cluster layout, color themes, gauge modes, shift lights, and metric slots directly on your wrist using the native Garmin menu—zero phone required!
+  - Full two-way synchronization with Garmin Connect Mobile settings.
 - **240° Sweeping Racing Tachometer Gauge:**
   - Smooth outer gauge arc (`210°` to `330°` clockwise) with a designated **Redline Zone** (`75%–100%`) and hardware anti-aliasing.
   - Sweeping perimeter needle indicating live seconds without cluttering the center display.
@@ -118,15 +127,16 @@ ChronoGT/
 
 ---
 
-## ⌚ Supported Garmin Devices (94 Round Color Models)
+## ⌚ Supported Garmin Devices (159 Round Color Models)
 
-Pre-compiled and certified in `bin/ChronoGT.iq` across 94 round color Garmin watches (Connect IQ 3.2+), including:
+Pre-compiled and certified in `bin/ChronoGT.iq` across 159 round color Garmin watches (Connect IQ 3.2+), including:
 - **Venu Series:** Venu 3, Venu 3S, Venu 2, Venu 2 Plus, Venu 2S, Venu, Venu Sq 2
-- **Fēnix Series:** fēnix 8 (43mm/47mm/51mm/Solar), fēnix 7/7 Pro/7S/7X, fēnix 6/6 Pro/6S/6X, fēnix 5 Plus
-- **Forerunner Series:** Forerunner 965, 265, 265S, 955, 255, 255S, 745, 245
+- **Fēnix Series:** fēnix 8 (43mm/47mm/51mm/Solar), fēnix E, fēnix 7/7 Pro/7S/7X, fēnix 6/6 Pro/6S/6X, fēnix 5 Plus
+- **Forerunner Series:** Forerunner 965, 265, 265S, 955, 255, 255S, 745, 245, 165
 - **Epix Series:** epix (Gen 2), epix Pro (42mm/47mm/51mm)
-- **MARQ & Approach:** MARQ Gen 2 (Athlete, Aviator, Captain, Commander, Golfer), Approach S70, Approach S62
-- **Vívoactive & Enduro:** vívoactive 5, vívoactive 4/4S, Enduro, Enduro 3
+- **MARQ Series:** MARQ Gen 2 & Gen 1 (Athlete, Adventurer, Aviator, Captain, Commander, Golfer)
+- **Vívoactive & Enduro:** vívoactive 5, vívoactive 4/4S, Enduro, Enduro 2, Enduro 3
+- **D2 & Descent Series:** D2 Mach 1, D2 Mach 2 Pro, Descent Mk2, Descent Mk3
 
 ---
 
