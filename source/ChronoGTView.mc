@@ -584,7 +584,7 @@ class ChronoGTView extends WatchUi.WatchFace {
             dc.fillPolygon(poly);
         }
 
-        // Inner nested continuous line arc
+        // Inner nested continuous line arc (kept within outer rim, stops before box)
         dc.setColor(COLOR_TRACK, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
         dc.drawArc(cx, cy, radius - 26, Graphics.ARC_CLOCKWISE, 220, 320);
@@ -600,45 +600,27 @@ class ChronoGTView extends WatchUi.WatchFace {
 
         // 2. Sequential Shift Lights
         if (_cachedShowShiftLights) {
-            drawShiftLights(dc, cx, cy - (radius * 48) / 100, _gaugeRatio);
+            drawShiftLights(dc, cx, cy - (radius * 50) / 100, _gaugeRatio);
         }
 
         // 3. Central 1980s VFD Bordered Readout Box
-        // Calculate text bounds dynamically so the box wraps identically on every resolution
-        var hour = clockTime.hour;
-        if (!System.getDeviceSettings().is24Hour) {
-            hour = hour % 12;
-            if (hour == 0) {
-                hour = 12;
-            }
-        }
-        var timeStr = Lang.format("$1$:$2$", [hour.format("%02d"), clockTime.min.format("%02d")]);
-        var numFont = Graphics.FONT_NUMBER_MEDIUM;
+        // Use FONT_LARGE or FONT_MEDIUM based on resolution so it never bursts the box
+        var numFont = (radius >= 180) ? Graphics.FONT_LARGE : Graphics.FONT_MEDIUM;
         var numH = Graphics.getFontHeight(numFont);
-        var timeW = dc.getTextWidthInPixels(timeStr, numFont);
 
-        var secStr = ":" + clockTime.sec.format("%02d");
-        var secFont = Graphics.FONT_TINY;
-        var secH = Graphics.getFontHeight(secFont);
-        var secW = dc.getTextWidthInPixels(secStr, secFont);
-
-        var gap = 6;
-        var padX = 14;
-        var padY = 8;
-        var totalContentW = timeW + gap + secW;
-
-        var boxW = totalContentW + (padX * 2);
-        var boxH = numH + (padY * 2);
+        var boxW = (radius * 136) / 100;
+        var boxH = numH + 12;
         var boxX = cx - (boxW / 2);
         var boxY = cy - (boxH / 2) - (radius * 8) / 100;
 
-        // Technical Box Border
+        // Base Box Outline (dark track)
         dc.setColor(COLOR_TRACK, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(1);
         dc.drawRectangle(boxX, boxY, boxW, boxH);
 
-        // Glowing Corner Brackets
+        // Glowing Corner Brackets (accent color)
         dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
-        var cornerLen = (boxH > 40) ? 10 : 7;
+        var cornerLen = 8;
         // Top-left
         dc.drawLine(boxX, boxY, boxX + cornerLen, boxY);
         dc.drawLine(boxX, boxY, boxX, boxY + cornerLen);
@@ -652,14 +634,25 @@ class ChronoGTView extends WatchUi.WatchFace {
         dc.drawLine(boxX + boxW, boxY + boxH, boxX + boxW - cornerLen, boxY + boxH);
         dc.drawLine(boxX + boxW, boxY + boxH, boxX + boxW, boxY + boxH - cornerLen);
 
-        // Draw Time Text inside box
-        var textStartX = boxX + padX;
-        dc.setColor(COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(textStartX, boxY + padY, numFont, timeStr, Graphics.TEXT_JUSTIFY_LEFT);
+        // Digital Time (cleanly centered inside the box)
+        var hour = clockTime.hour;
+        if (!System.getDeviceSettings().is24Hour) {
+            hour = hour % 12;
+            if (hour == 0) {
+                hour = 12;
+            }
+        }
+        var timeStr = Lang.format("$1$:$2$", [hour.format("%02d"), clockTime.min.format("%02d")]);
 
-        // Draw Live Seconds neatly beside minutes
+        dc.setColor(COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx - (radius * 16) / 100, boxY + (boxH / 2) - (numH / 2), numFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
+
+        // Live Seconds alongside minutes
+        var secStr = ":" + clockTime.sec.format("%02d");
+        var secFont = (radius >= 180) ? Graphics.FONT_SMALL : Graphics.FONT_TINY;
+        var secH = Graphics.getFontHeight(secFont);
         dc.setColor(_isRedlinePulse ? COLOR_REDLINE : accentColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(textStartX + timeW + gap, boxY + padY + numH - secH - 2, secFont, secStr, Graphics.TEXT_JUSTIFY_LEFT);
+        dc.drawText(cx + (radius * 36) / 100, boxY + (boxH / 2) - (secH / 2), secFont, secStr, Graphics.TEXT_JUSTIFY_CENTER);
 
         // 4. Satellite Diagnostic Tiles (BX Digit Trip Computer Readouts)
         var tileY = cy + (radius * 28) / 100;
