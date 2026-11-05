@@ -278,9 +278,18 @@ class ChronoGTSettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
             item.setSubLabel(ChronoGTSettingsMenu.getSlotName(nextB));
             WatchUi.requestUpdate();
         }
+
+        try {
+            getApp().onSettingsChanged();
+        } catch (e) {
+        }
     }
 
     function onBack() as Void {
+        try {
+            getApp().onSettingsChanged();
+        } catch (e) {
+        }
         WatchUi.popView(WatchUi.SLIDE_RIGHT);
     }
 }

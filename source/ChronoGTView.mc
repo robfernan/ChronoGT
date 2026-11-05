@@ -446,12 +446,17 @@ class ChronoGTView extends WatchUi.WatchFace {
             dc.fillPolygon(poly);
         }
 
-        // 2. Sequential VTEC Shift Lights nestled under the top horizontal sweep
+        // 2. Sequential VTEC Shift Lights nestled under top arch
         if (_cachedShowShiftLights) {
-            drawShiftLights(dc, cx, cy - (radius * 44) / 100, _gaugeRatio);
+            drawShiftLights(dc, cx, cy - (radius * 52) / 100, _gaugeRatio);
         }
 
-        // 3. S2000 AP1 Digital Speedo (HH:MM)
+        // 3. Date Readout (above Speedo Time, exactly like Classic layout)
+        var dateStr = Lang.format("$1$ $2$", [dateInfo.day_of_week.toUpper(), dateInfo.day.format("%02d")]);
+        dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, cy - (radius * 40) / 100, Graphics.FONT_TINY, dateStr, Graphics.TEXT_JUSTIFY_CENTER);
+
+        // 4. S2000 AP1 Digital Speedo (HH:MM) - Adaptive Font & Clean Width
         var hour = clockTime.hour;
         if (!System.getDeviceSettings().is24Hour) {
             hour = hour % 12;
@@ -460,22 +465,29 @@ class ChronoGTView extends WatchUi.WatchFace {
             }
         }
         var timeStr = Lang.format("$1$:$2$", [hour.format("%02d"), clockTime.min.format("%02d")]);
-        // For displays with radius < 140 (e.g. 240x240 like MARQ), use FONT_NUMBER_MEDIUM so it doesn't collide with flank bars
-        var numFont = (radius < 140) ? Graphics.FONT_NUMBER_MEDIUM : Graphics.FONT_NUMBER_HOT;
-        var numH = Graphics.getFontHeight(numFont);
-        var timeY = cy - (numH / 2) - (radius * 4) / 100;
+
+        // Use FONT_NUMBER_MEDIUM for balanced, non-overlapping speedo display across all resolutions
+        var numFont = Graphics.FONT_NUMBER_MEDIUM;
+        var dims = dc.getTextDimensions(timeStr, numFont);
+        var numW = dims[0];
+        var numH = dims[1];
+        var timeY = cy - (numH / 2) - (radius * 6) / 100;
 
         dc.setColor(COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, timeY, numFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
-        // 4. Iconic AP1 Flanking Vertical Auxiliary Bars
+        // 5. Iconic AP1 Flanking Vertical Auxiliary Bars (Positioned cleanly outside time digits)
+        var flankMargin = (radius * 8) / 100;
+        var leftFlankX = cx - (numW / 2) - flankMargin - 6;
+        var rightFlankX = cx + (numW / 2) + flankMargin;
+        var barH = (numH * 70) / 100;
+        var barY = timeY + (numH - barH) / 2;
+
         // Left Flank Bar = Battery % (AP1 Engine Temp)
         var sysStats = _sysStats;
         var batVal = (sysStats != null && sysStats.battery != null) ? sysStats.battery.toNumber() : 100;
         var batRatio = batVal.toFloat() / 100.0f;
-        var barY = cy - (radius * 12) / 100;
-        var barH = (radius * 36) / 100;
-        drawAP1FlankBar(dc, cx - (radius * 72) / 100, barY, barH, batRatio, (batVal <= 20) ? COLOR_REDLINE : accentColor);
+        drawAP1FlankBar(dc, leftFlankX, barY, barH, batRatio, (batVal <= 20) ? COLOR_REDLINE : accentColor);
 
         // Right Flank Bar = Steps / Goal (AP1 Fuel Level)
         var actInfo = _actInfo;
@@ -485,38 +497,32 @@ class ChronoGTView extends WatchUi.WatchFace {
         if (stepRatio > 1.0f) {
             stepRatio = 1.0f;
         }
-        drawAP1FlankBar(dc, cx + (radius * 66) / 100, barY, barH, stepRatio, accentColor);
+        drawAP1FlankBar(dc, rightFlankX, barY, barH, stepRatio, accentColor);
 
-        // 5. Date Readout (clean spacing below speedo digits)
-        var dateStr = Lang.format("$1$ $2$", [dateInfo.day_of_week.toUpper(), dateInfo.day.format("%02d")]);
-        dc.setColor(accentColor, Graphics.COLOR_TRANSPARENT);
-        var dateY = timeY + numH - ((radius < 140) ? 2 : 4);
-        dc.drawText(cx, dateY, Graphics.FONT_TINY, dateStr, Graphics.TEXT_JUSTIFY_CENTER);
+        // 6. Live Seconds (:SS)
+        var secStr = ":" + clockTime.sec.format("%02d");
+        dc.setColor(_isRedlinePulse ? COLOR_REDLINE : accentColor, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, cy + (radius * 18) / 100, Graphics.FONT_SMALL, secStr, Graphics.TEXT_JUSTIFY_CENTER);
 
-        // 6. Telemetry Row: Slot A, Live Seconds, Slot B (spread wide to avoid collision)
+        // 7. Telemetry Row: Slot A & Slot B
         var strA = ChronoGTMetrics.getMetricString(_cachedMetricSlotA, _actInfo, _sysStats, _hr);
         var strB = ChronoGTMetrics.getMetricString(_cachedMetricSlotB, _actInfo, _sysStats, _hr);
-        var dateH = Graphics.getFontHeight(Graphics.FONT_TINY);
-        var rowY = dateY + dateH + ((radius < 140) ? 2 : 4);
+        var slotY = cy + (radius * 43) / 100;
 
         if (strA.length() > 0) {
             dc.setColor(COLOR_MUTED, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(cx - (radius * 48) / 100, rowY + 2, Graphics.FONT_XTINY, strA, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(cx - (radius * 40) / 100, slotY, Graphics.FONT_XTINY, strA, Graphics.TEXT_JUSTIFY_CENTER);
         }
-
-        var secStr = ":" + clockTime.sec.format("%02d");
-        dc.setColor(_isRedlinePulse ? COLOR_REDLINE : accentColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, rowY, Graphics.FONT_SMALL, secStr, Graphics.TEXT_JUSTIFY_CENTER);
 
         if (strB.length() > 0) {
             var colorB = (_cachedMetricSlotB == 5 && _hr > 0) ? COLOR_REDLINE : COLOR_MUTED;
             dc.setColor(colorB, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(cx + (radius * 48) / 100, rowY + 2, Graphics.FONT_XTINY, strB, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(cx + (radius * 40) / 100, slotY, Graphics.FONT_XTINY, strB, Graphics.TEXT_JUSTIFY_CENTER);
         }
 
-        // Bottom Steps Total
+        // 8. Bottom Steps Total
         dc.setColor(COLOR_MUTED, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, cy + (radius * 65) / 100, Graphics.FONT_XTINY, steps.format("%d") + " STEPS", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, cy + (radius * 62) / 100, Graphics.FONT_XTINY, steps.format("%d") + " STEPS", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // Helper: 5-segment vertical ladder bar for AP1 flank gauges
