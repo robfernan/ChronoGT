@@ -56,7 +56,7 @@ Following its release on **October 23, 2026**:
 
 ## ✨ Features
 
-- **3 Authentic Racing Cluster Layouts (v1.2.0):**
+- **3 Authentic Racing Cluster Layouts (v1.1.0 - First Major Store Update):**
   - **Layout 0: Classic JDM Analog** (240° Defi / RX-7 perimeter sweep, needle, shift LEDs, center digital speedo).
   - **Layout 1: Honda S2000 AP1** (Signature progressive climbing tachometer arc, twin vertical flank bars for Battery & Steps, high-contrast digital speedo).
   - **Layout 2: 1985 Citroën BX 19 Digit** (Dual nested neon arcs, VFD bordered digital box with glowing corner brackets, and diagnostic tiles).
@@ -181,9 +181,8 @@ Since I do not own every physical Garmin watch model, community feedback is inva
 
 ## 🗺️ Roadmap & Next Milestones
 
-- [x] **v1.0.0 — Initial Launch:** 240° sweeping tachometer, progressive 5-LED shift lights, live health telemetry, and universal 94-device compatibility.
-- [x] **v1.1.0 — On-Device Customization Menu:** Allow switching themes, gauge modes, and shift lights directly from the watch menu ().
-- [x] **v1.2.0 — Night & Day Multi-Cluster Evolution:** Added 3 distinct clusters (Classic JDM, S2000 Ribbon, BX 19 Digit), :55-:59 redline pulse, and configurable dual metric slots (Battery, Steps, Remaining, Calories, Distance, HR).
+- [x] **v1.0.0 — Initial Launch:** 240° sweeping tachometer, progressive 5-LED shift lights, live health telemetry, and universal device compatibility.
+- [x] **v1.1.0 — The Multi-Cluster Update (First Store Update):** Added 3 distinct authentic instrument clusters (Classic JDM, Honda S2000 AP1, Citroën BX 19 Digit), on-watch customization menu (`WatchUi.Menu2`), universal resolution-adaptive geometry across 159 certified models, :55-:59 redline pulse, and configurable dual metric slots.
 
 ---
 
