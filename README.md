@@ -30,11 +30,11 @@
 > **Running ChronoGT on your wrist?** [⭐ Star the repo](https://github.com/robfernan/ChronoGT) so other Garmin folks can find it — and open an [issue](https://github.com/robfernan/ChronoGT/issues) with your watch model if anything feels off.
 
 <p align="center">
-  <a href="https://youtube.com/shorts/R3h-WX0FZ2w">
-    <img src="docs/assets/preview.gif" alt="ChronoGT Watch Face Animated Live Preview on Garmin Venu 3" width="460" />
-  </a>
+  <img src="docs/assets/screen_1_classic.png" alt="Classic JDM Analog Layout on MARQ Captain" width="220" />
+  <img src="docs/assets/screen_2_s2000.png" alt="Honda S2000 AP1 Layout on MARQ Captain" width="220" />
+  <img src="docs/assets/screen_3_citroen.png" alt="Citroën BX 19 Digit Layout on MARQ Captain" width="220" />
   <br />
-  <sub>▶️ <em>Click above or <a href="https://youtube.com/shorts/R3h-WX0FZ2w">watch the full live demonstration on YouTube Shorts</a></em></sub>
+  <sub><strong>Layout 0: Classic JDM Analog</strong> &nbsp;·&nbsp; <strong>Layout 1: Honda S2000 AP1</strong> &nbsp;·&nbsp; <strong>Layout 2: 1985 Citroën BX 19 Digit</strong></sub>
 </p>
 
 ---
