@@ -1,199 +1,198 @@
-# 🏎️ ChronoGT — Racing Tachometer Watch Face for Garmin Connect IQ
+# 🏎️ ChronoGT Tachometer — Motorsport Instrument Clusters for Garmin Connect IQ
 
 <p align="center">
   <a href="https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a">
     <img src="https://img.shields.io/badge/Garmin%20Store-Live%20on%20Connect%20IQ-007CC3?style=for-the-badge&logo=garmin&logoColor=white" alt="Garmin Connect IQ Store" />
   </a>
-  <img src="https://img.shields.io/badge/Installs-100%2B%20%C2%B7%2094%20models-00CC66?style=for-the-badge&logo=garmin&logoColor=white" alt="100+ installs · 94 models" />
-  <img src="https://img.shields.io/badge/SDK-Connect%20IQ%209.3.0-FFAA00?style=for-the-badge" alt="SDK 9.3.0" />
-  <img src="https://img.shields.io/badge/Language-Monkey%20C-FF2200?style=for-the-badge" alt="Monkey C" />
-  <a href="https://youtube.com/shorts/R3h-WX0FZ2w">
-    <img src="https://img.shields.io/badge/YouTube-Shorts%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Demo" />
+  <a href="https://github.com/robfernan/ChronoGT">
+    <img src="https://img.shields.io/badge/GitHub-robfernan%2FChronoGT-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" />
   </a>
-  <img src="https://img.shields.io/badge/Supported%20Models-94%20Watches-lightgrey?style=for-the-badge" alt="94 Models" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
+  <img src="https://img.shields.io/badge/Version-1.1.0-orange?style=for-the-badge" alt="Version 1.1.0" />
+  <img src="https://img.shields.io/badge/Certified%20Models-159%20Watches-00CC66?style=for-the-badge&logo=garmin&logoColor=white" alt="159 Certified Models" />
 </p>
 
 <p align="center">
-  <sub>The <a href="https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a">live Connect IQ store page</a> shows <strong>100+ downloads</strong> · 94 models · free · v1.0.0</sub>
-</p>
-
-<p align="center">
-  <strong>A clean, motorsport-inspired digital & analog watch face paying homage to 90s JDM instrument clusters and Gran Turismo tachometers.</strong>
+  <strong>Three iconic racing instrument clusters built with pure vector math for 159 certified Garmin watches. 100% free forever.</strong>
 </p>
 
 <p align="center">
   <a href="https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a">
-    <strong>⬇️ Download Free on the Garmin Connect IQ Store</strong>
+    <strong>⬇️ Download Free on Garmin Connect IQ Store</strong>
+  </a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/robfernan/ChronoGT">
+    <strong>⭐ View Source on GitHub</strong>
   </a>
 </p>
 
-> **Running ChronoGT on your wrist?** [⭐ Star the repo](https://github.com/robfernan/ChronoGT) so other Garmin folks can find it — and open an [issue](https://github.com/robfernan/ChronoGT/issues) with your watch model if anything feels off.
-
 <p align="center">
-  <img src="docs/assets/screen_1_classic.png" alt="Classic JDM Analog Layout on MARQ Captain" width="220" />
-  <img src="docs/assets/screen_2_s2000.png" alt="Honda S2000 AP1 Layout on MARQ Captain" width="220" />
-  <img src="docs/assets/screen_3_citroen.png" alt="Citroën BX 19 Digit Layout on MARQ Captain" width="220" />
+  <img src="docs/assets/screen_1_classic.png" alt="Classic JDM Analog Layout on MARQ Captain" width="230" />
+  <img src="docs/assets/screen_2_s2000.png" alt="Honda S2000 AP1 Layout on MARQ Captain" width="230" />
+  <img src="docs/assets/screen_3_citroen.png" alt="1985 Citroën BX 19 Digit Layout on MARQ Captain" width="230" />
   <br />
-  <sub><strong>Layout 0: Classic JDM Analog</strong> &nbsp;·&nbsp; <strong>Layout 1: Honda S2000 AP1</strong> &nbsp;·&nbsp; <strong>Layout 2: 1985 Citroën BX 19 Digit</strong></sub>
+  <sub><strong>Classic JDM Analog</strong> &nbsp;·&nbsp; <strong>Honda S2000 AP1</strong> &nbsp;·&nbsp; <strong>1985 Citroën BX 19 Digit</strong> (Rendered on MARQ Captain 240×240 MIP)</sub>
 </p>
 
 ---
 
-## 📈 Launch Traction & Organic Milestones
+## 🏁 Overview
 
-Following its release on **October 23, 2026**:
-- **100+ Downloads:** The [live Connect IQ store page](https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a) shows **100+ downloads** for ChronoGT Tachometer (free, v1.0.0).
-- **Organic Social Conversion:**
-  - **YouTube Shorts:** 193+ views (in 1 day, 18 hours) directly driving active installs from watch enthusiasts.
-  - **DeviantArt:** 13+ views from digital design and automotive UI communities.
-  - **Pinterest:** Early discovery pin indexing across motorsport & wearable design boards.
-- **Physical Hardware & Simulator Validated Across Resolutions:**
-  - **MARQ Captain (240×240 64-color MIP):** Perfect memory budget and zero text collisions under tight low-resolution constraints.
-  - **Fēnix 8 47mm (454×454 AMOLED):** Ultra-sharp high-DPI contrast and vibrant night-mode luminous gauges.
-  - **Vívoactive 5 (390×390 AMOLED):** Flawless proportional scaling across all 3 cluster styles with adaptive typography.
+**ChronoGT Tachometer** is an open-source, motorsport-grade Garmin watch face paying homage to legendary analog and digital sports car instrument clusters. Originally launched on October 23, 2026, the **v1.1.0 Multi-Cluster update** (released November 5, 2026) expands the experience into 3 fully realized heritage dashboards with a native on-watch settings menu (`WatchUi.Menu2`).
+
+- **100% Free Forever:** No paywalls, trial licenses, unlock keys, subscriptions, or ads.
+- **Zero Heavy Bitmaps:** 100% procedural vector rendering (`dc.drawArc()`, `dc.fillPolygon()`) for lightning-fast refresh and ultra-low battery drain.
+- **Micro Footprint:** Only **23 KB** package size on the Connect IQ store with minimal runtime heap usage—fitting easily into strict MARQ-class (~96 KiB) watch-face memory limits.
+- **Universal Dynamic Geometry:** Fully adaptive layout engine calculating text boundaries dynamically via `dc.getTextDimensions()` to prevent overlaps across 218px, 240px, 260px, 280px, 360px, 390px, 416px, and 454px displays.
+- **Hardware Verified:** Tested and validated on physical and simulated hardware across disparate display tech:
+  - **MARQ Captain** (240×240, 64-color memory-in-pixel / MIP)
+  - **Vívoactive 5** (390×390 AMOLED)
+  - **Fēnix 8 47mm** (454×454 high-density AMOLED)
+
+---
+
+## 🏎️ Three Authentic Heritage Clusters
+
+Switch between three iconic eras of automotive instrumentation on the fly:
+
+| Cluster | Inspiration | Display Characteristics |
+| :--- | :--- | :--- |
+| **1. Classic JDM Analog** | 90s Japanese sports icons (Defi / RX-7 / GT-R) | 240° sweeping perimeter tachometer arc (`210°` to `330°`), dedicated redline zone, live sweeping second needle, sequential 5-LED shift pod, and centered digital speedometer. |
+| **2. Honda S2000 AP1** | Formula-inspired 9,000 RPM high-revving roadster | Progressive climbing stepped tachometer curve, high-contrast digital speedo, and twin vertical flank bar gauges indicating **Battery %** ("engine temperature" metaphor) and **Steps vs Goal** ("fuel level" metaphor). *(Note: Telemetry represents native watch metrics, not vehicle ECU/OBD data).* |
+| **3. 1985 Citroën BX 19 Digit** | Group B era French digital futurism | Dual nested neon tachometer arcs, retro Vacuum Fluorescent Display (VFD) bordered digital readout with glowing corner brackets, and satellite diagnostic tiles. |
 
 ---
 
 ## ✨ Features
 
-- **3 Authentic Racing Cluster Layouts (v1.1.0 - First Major Store Update):**
-  - **Layout 0: Classic JDM Analog** (240° Defi / RX-7 perimeter sweep, needle, shift LEDs, center digital speedo).
-  - **Layout 1: Honda S2000 AP1** (Signature progressive climbing tachometer arc, twin vertical flank bars for Battery & Steps, high-contrast digital speedo).
-  - **Layout 2: 1985 Citroën BX 19 Digit** (Dual nested neon arcs, VFD bordered digital box with glowing corner brackets, and diagnostic tiles).
-- **Universal Resolution-Adaptive Geometry:**
-  - Dynamic `getTextDimensions` typography scaling guaranteeing zero text collision or overlapping elements across 218px, 240px, 260px, 280px, 360px, 390px, 416px, and 454px screens.
-- **On-Watch Customization Menu (WatchUi.Menu2):**
-  - Customize cluster layout, color themes, gauge modes, shift lights, and metric slots directly on your wrist using the native Garmin menu—zero phone required!
-  - Full two-way synchronization with Garmin Connect Mobile settings.
-- **240° Sweeping Racing Tachometer Gauge:**
-  - Smooth outer gauge arc (`210°` to `330°` clockwise) with a designated **Redline Zone** (`75%–100%`) and hardware anti-aliasing.
-  - Sweeping perimeter needle indicating live seconds without cluttering the center display.
+- **Native On-Watch Settings (`WatchUi.Menu2`):**
+  - Long-press the watch menu button to swap clusters, toggle shift lights, change themes, choose primary gauge drive modes, or map telemetry slots right on your wrist without taking out your phone.
+  - Seamless two-way synchronization between watch storage properties and Garmin Connect Mobile.
 - **Sequential 5-LED Shift Lights:**
-  - F1 / JDM progressive shift indicator (`Green → Green → Amber → Amber → Redline`) that illuminates dynamically as the seconds hand approaches the redline.
-- **Instant-Read Telemetry Dashboard:**
-  - **Top:** Day of week & date (`FRI 23`)
-  - **Center:** Crisp oversized digital time (`HH:MM`, 12h/24h aware) + live `:SS` seconds counter
-  - **Bottom:** Battery `%` (turns redline at `≤ 20%`), live Heart Rate (`BPM`), and `STEPS` with an integrated step-goal progress bar
-- **Zero-Allocation Ultra-Low-Power Engine:**
-  - Cached property state and hoisted vectors to minimize CPU wake cycles and maximize battery life on MIP and AMOLED displays.
-- **4 Signature Racing Cluster Colorways:**
-  - **JDM Amber (#FFAA00):** Warm 90s instrument cluster glow.
-  - **Redline Red (#FF2200):** Aggressive high-contrast sport trim.
-  - **Track Cyan (#00CCFF):** Modern motorsport digital display.
-  - **Tach Green (#00FF66):** Classic endurance racing telemetry.
+  - Progressive F1/GT shift light pod (`Green → Green → Amber → Amber → Redline`) that illuminates dynamically as the driving metric approaches redline.
+- **Configurable Primary Gauge Modes:**
+  - **Live Seconds:** Sweeping second needle / rising tach arc.
+  - **Steps vs. Goal:** Tachometer fills as you complete your daily step target.
+  - **Live Heart Rate:** Dynamic tachometer driven by pulse with a high-intensity redline alert threshold.
+- **Dual Telemetry Metric Slots:**
+  - Two independently customizable data slots supporting: **Battery %**, **Daily Steps**, **Steps Remaining**, **Calories**, **Distance**, and **Live Heart Rate** (or **None** for a minimalist gauge).
+- **Awake-Only Redline Pulse:**
+  - Limiter flash triggers during seconds `:55–:59` when the watch is active/awake; strictly silenced during low-power sleep mode to save energy.
 - **AMOLED Always-On Display (AOD) Burn-In Safe:**
-  - Micro-pixel drift mode (`onEnterSleep`) to prevent screen burn-in on AMOLED displays while preserving battery life.
-- **Exceptional Memory & Battery Efficiency:**
-  - **Only 3.5 KB runtime memory footprint** (0.45% of available watch RAM).
-  - 100% vector mathematics (`dc.drawArc()`, `dc.fillPolygon()`) with zero heavy raster backgrounds.
+  - Integrated micro-pixel sleep drift (`onEnterSleep`) preventing phosphor/pixel burn-in on AMOLED screens while maintaining glanceable time.
 
 ---
 
-## 📁 Repository Structure
+## 🎨 Heritage Colorways
 
-The project follows the standard Garmin Connect IQ enterprise directory layout:
+Engineered with high-contrast palette values for both transflective MIP panels and vibrant AMOLED displays:
+
+| Colorway | Hex Value | Visual Style |
+| :--- | :--- | :--- |
+| **JDM Amber** | `#FFAA00` | Classic 90s amber backlighting (Defi / NSX / Integra Type R) |
+| **Redline Red** | `#FF2200` | Aggressive motorsport cockpit track instrumentation |
+| **Track Cyan** | `#00CCFF` | Modern digital endurance racing HUD |
+| **Tach Green** | `#00FF66` | Vintage phosphor and Le Mans telemetry display |
+
+---
+
+## 🏗️ Architecture & How It Works
 
 ```text
-ChronoGT/
-├── .gitignore                      # Hardened git ignore (blocks RSA keys & build temp)
-├── LICENSE                         # Official MIT License
-├── README.md                       # Documentation & store assets
-├── manifest.xml                    # Application manifest & 94 certified devices
-├── monkey.jungle                   # Connect IQ build configuration
-├── bin/
-│   └── ChronoGT.iq                 # Store release package (1.4 MB universal binary)
-├── docs/
-│   └── assets/                     # Store graphics, hero banner & preview animations
-│       ├── cover_500x500.png       # 500x500 store cover image
-│       ├── hero_banner.png         # 1440x720 featured store banner
-│       ├── preview.gif             # Animated 10 FPS demonstration
-│       ├── preview.png             # Static high-res render on Venu 3 bezel
-│       ├── screen_image.png        # Compressed store screenshot (< 150 KB)
-│       └── social_preview.png      # 1280x640 GitHub Open Graph card
-├── resources/
-│   ├── drawables/                  # Launcher icon & XML definitions
-│   ├── settings/                   # Garmin Connect Mobile property definitions
-│   └── strings/                    # Localized string resources
-├── scripts/
-│   ├── record.sh                   # Automated frame recorder & GIF pipeline
-│   ├── record_60s.sh               # 60-second 1080x1920 YouTube Short recorder
-│   └── run.sh                      # One-click compile & simulator launcher
-└── source/
-    ├── ChronoGTApp.mc              # Application lifecycle & settings listener
-│   ├── ChronoGTMetrics.mc          # Zero-allocation telemetry string cache
-│   ├── ChronoGTSettingsMenu.mc     # On-device WatchUi.Menu2 customization interface
-│   └── ChronoGTView.mc             # Procedural 2D vector drawing engine (Layouts 0, 1, 2)
+source/
+├── ChronoGTApp.mc          # Application lifecycle, settings update delegate, Menu2 launcher
+├── ChronoGTMetrics.mc      # Cached data provider (zero per-frame string allocations)
+├── ChronoGTSettingsMenu.mc # WatchUi.Menu2 interface with real-time property writeback
+└── ChronoGTView.mc         # Pure procedural vector drawing pipeline (Layouts 0, 1, 2)
 ```
 
----
-
-## ⌚ Supported Garmin Devices (159 Round Color Models)
-
-Pre-compiled and certified in `bin/ChronoGT.iq` across 159 round color Garmin watches (Connect IQ 3.2+), including:
-- **Venu Series:** Venu 3, Venu 3S, Venu 2, Venu 2 Plus, Venu 2S, Venu, Venu Sq 2
-- **Fēnix Series:** fēnix 8 (43mm/47mm/51mm/Solar), fēnix E, fēnix 7/7 Pro/7S/7X, fēnix 6/6 Pro/6S/6X, fēnix 5 Plus
-- **Forerunner Series:** Forerunner 965, 265, 265S, 955, 255, 255S, 745, 245, 165
-- **Epix Series:** epix (Gen 2), epix Pro (42mm/47mm/51mm)
-- **MARQ Series:** MARQ Gen 2 & Gen 1 (Athlete, Adventurer, Aviator, Captain, Commander, Golfer)
-- **Vívoactive & Enduro:** vívoactive 5, vívoactive 4/4S, Enduro, Enduro 2, Enduro 3
-- **D2 & Descent Series:** D2 Mach 1, D2 Mach 2 Pro, Descent Mk2, Descent Mk3
+1. **Procedural View Pipeline (`ChronoGTView.mc`):**
+   - No raster images or sprite sheets are bundled in the runtime binary. Everything is drawn procedurally via `dc.drawArc()`, `dc.fillPolygon()`, and geometric math primitives.
+   - Screen geometry is calculated relative to screen center `(cx, cy)` and screen radius `r`, allowing seamless scaling across any round Garmin bezel.
+2. **Dynamic Typography Scaling:**
+   - Instead of hardcoded offsets, font vertical metrics and bounding boxes are evaluated via `dc.getTextDimensions()` to anchor headers, speedo text, and telemetry indicators into guaranteed conflict-free vertical zones.
+3. **Zero Allocations in Fast Path (`ChronoGTMetrics.mc`):**
+   - Telemetry strings and sensor query states are cached and formatted only when metric values change, avoiding garbage collection spikes during high-frequency screen updates.
+4. **Settings Sync Architecture:**
+   - Properties are defined in `resources/settings/settings.xml`. When modified on the watch via `ChronoGTSettingsMenu.mc`, values are written directly to application properties, instantly triggering `onSettingsChanged()` in `ChronoGTApp.mc` and refreshing the view.
 
 ---
 
-## 🚀 Installation & Sideloading
+## ⌚ Supported Garmin Devices (159 Models)
 
-### Option 1: Garmin Connect IQ Store
-Download [**ChronoGT Tachometer** on the Connect IQ Store](https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a) directly via the Connect IQ mobile app on iOS or Android.
+ChronoGT Tachometer is compiled and certified in `manifest.xml` for **159 round color Garmin smartwatches** (Connect IQ 3.2+), including:
 
-### Option 2: Direct Binary Sideload (.iq)
-1. Download `ChronoGT.iq` from the [Latest GitHub Release](https://github.com/robfernan/ChronoGT/releases/latest).
-2. Connect your Garmin watch to your computer via USB.
-3. Place the extracted `.prg` for your device into the `GARMIN/APPS` folder on the watch storage.
+- **Fēnix Series:** fēnix 8 (43mm, 47mm, Solar 47mm, Solar 51mm, Pro 47mm), fēnix E, fēnix 7 / 7 Pro / 7S / 7X, fēnix 6 / 6 Pro / 6S / 6X, fēnix 5 Plus / 5S Plus / 5X Plus
+- **Forerunner Series:** Forerunner 965, 265, 265S, 955, 255, 255S, 745, 245 / 245 Music, 165 / 165 Music, 170 / 170 Music
+- **Venu Series:** Venu 3, Venu 3S, Venu 2, Venu 2 Plus, Venu 2S, Venu, Venu Mercedes-Benz, D2 Air, D2 Air X10
+- **Epix Series:** epix (Gen 2), epix Pro (42mm, 47mm, 51mm)
+- **MARQ Series (Gen 1 & Gen 2):** MARQ Athlete, Adventurer, Aviator, Captain, Commander, Golfer
+- **Vívoactive & Enduro:** vívoactive 5, vívoactive 4 / 4S, Enduro, Enduro 3
+- **Tactix, Descent & D2:** tactix 7, tactix Delta, tactix Charlie, Descent Mk2 / Mk2S / Mk3 (43mm, 51mm), Descent G2, D2 Mach 1, D2 Mach 2, D2 Mach 2 Pro
 
 ---
 
-## 🛠️ Developer Setup & Local Simulation
+## ⚙️ Settings Reference
+
+Settings can be toggled via **Garmin Connect Mobile** or the **On-Watch Menu** (long press watch `Menu` button):
+
+| Setting Key | Options | Default | Description |
+| :--- | :--- | :--- | :--- |
+| **LayoutMode** | `Classic JDM Analog (0)`, `Honda S2000 AP1 (1)`, `Citroën BX 19 Digit (2)` | `0` | Selects active instrument cluster architecture |
+| **AccentTheme** | `JDM Amber (0)`, `Redline Red (1)`, `Track Cyan (2)`, `Tach Green (3)` | `0` | Primary accent colorway |
+| **GaugeMode** | `Live Seconds (0)`, `Steps vs Goal (1)`, `Heart Rate (2)` | `0` | Metric driving the primary tachometer arc/needle |
+| **ShowShiftLights** | `Boolean` (`true` / `false`) | `true` | Enables progressive 5-LED shift light pod |
+| **RedlinePulse** | `Boolean` (`true` / `false`) | `true` | Enables awake-only tach pulse during `:55–:59` |
+| **MetricSlotA** | `Battery (0)`, `Steps (1)`, `Remaining (2)`, `Calories (3)`, `Distance (4)`, `HR (5)`, `None (6)` | `0` | Telemetry metric for Left/Top slot |
+| **MetricSlotB** | `Battery (0)`, `Steps (1)`, `Remaining (2)`, `Calories (3)`, `Distance (4)`, `HR (5)`, `None (6)` | `5` | Telemetry metric for Right/Bottom slot |
+
+---
+
+## 🛠️ Building & Simulating from Source
 
 ### Prerequisites
-- Garmin Connect IQ SDK `9.3.0+`
-- Developer RSA Key (`~/.Garmin/ConnectIQ/developer_key.der`)
+1. **Garmin Connect IQ SDK 9.3.0+** installed.
+2. A valid Garmin Developer RSA private key (`developer_key.der`).
 
-### Build & Run
+### Build Store Binary (`.iq`)
+To compile the universal distribution package:
 ```bash
-# Run locally in the Garmin Simulator
-./scripts/run.sh venu3
-
-# Build store package (.iq) supporting all 94 devices
 monkeyc -e -r -f monkey.jungle -o bin/ChronoGT.iq -y ~/.Garmin/ConnectIQ/developer_key.der -w
 ```
 
----
+### Launch in Simulator
+Using the included test script (`scripts/run.sh`):
+```bash
+# Test on default target (venu3)
+./scripts/run.sh
 
-## 💬 Community Testing & Feedback
-
-This project was developed, type-checked, and simulated using the official **Garmin Connect IQ SDK 9.3.0** hardware emulator. 
-
-Since I do not own every physical Garmin watch model, community feedback is invaluable! If you test ChronoGT on your physical device:
-- Please report your watch model and performance.
-- Have a feature request or layout idea? Feel free to open an issue or feature suggestion on [GitHub Issues](https://github.com/robfernan/ChronoGT/issues).
-
----
-
-## 🗺️ Roadmap & Next Milestones
-
-- [x] **v1.0.0 — Initial Launch:** 240° sweeping tachometer, progressive 5-LED shift lights, live health telemetry, and universal device compatibility.
-- [x] **v1.1.0 — The Multi-Cluster Update (First Store Update):** Added 3 distinct authentic instrument clusters (Classic JDM, Honda S2000 AP1, Citroën BX 19 Digit), on-watch customization menu (`WatchUi.Menu2`), universal resolution-adaptive geometry across 159 certified models, :55-:59 redline pulse, and configurable dual metric slots.
+# Test on a specific watch model
+./scripts/run.sh fenix847mm
+./scripts/run.sh marqcaptain
+./scripts/run.sh vivoactive5
+```
 
 ---
 
-## 📄 License
+## 📋 Changelog Highlights
 
-This project is licensed under the [MIT License](LICENSE) — see the LICENSE file for details.
+### v1.1.0 (November 5, 2026) — *The Multi-Cluster Update*
+- **3 Heritage Instrument Clusters:** Introduced Honda S2000 AP1 climbing curve and 1985 Citroën BX 19 Digit retro VFD alongside Classic JDM Analog.
+- **Native On-Watch Settings (`WatchUi.Menu2`):** Direct wrist-based customization with bi-directional Garmin Connect Mobile property synchronization.
+- **Universal Resolution-Adaptive Geometry:** Unified typography layout using `getTextDimensions` guaranteeing zero text overlap across all display sizes (218px to 454px).
+- **Expanded Hardware Support:** Certified across **159 Garmin models** (up from 94).
+- **Dual Telemetry Slots:** Configurable metric selection for slots A and B.
+- **Awake Limiter Pulse:** Redline flash during `:55–:59` when awake; automatically disabled in low-power sleep mode.
+- **AMOLED Sleep Drift:** Micro-pixel burn-in protection during low-power Always-On Display.
+
+### v1.0.0 (October 23, 2026) — *Initial Release*
+- Initial launch of ChronoGT 240° sweeping tachometer gauge, 5-LED shift lights, live health telemetry, and vector rendering engine.
 
 ---
 
-## 👤 Author
+## 📄 License & Credits
 
-**Robert Fernandez** — Cross-Platform Software Engineer & Digital Artist
-- **Portfolio:** [robertfernandez.dev](https://robertfernandez.dev)
-- **GitHub:** [@robfernan](https://github.com/robfernan)
+- **License:** Distributed under the [MIT License](LICENSE).
+- **Author & Developer:** **Robert Fernandez** ([@robfernan](https://github.com/robfernan)) · Connect IQ Developer: **MungDaal321**
+- **Website:** [robertfernandez.dev](https://robertfernandez.dev)
+- **Garmin Store Page:** [ChronoGT Tachometer on Connect IQ](https://apps.garmin.com/en-US/apps/a213d2da-0d13-4e02-ae58-3525fb89306a)
